@@ -1,9 +1,11 @@
 Lyshirts::Application.routes.draw do
+  
+
+  devise_for :admin_users
+
   resources :leads
 
-
   root :to => 'leads#new'
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -27,8 +27,16 @@ end
 
 gem 'jquery-rails'
 
+#forms substitute
 gem 'simple_form'
+
+#authentication
 gem 'devise'
+
+group :test do
+	#testing helpers
+	gem 'shoulda'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

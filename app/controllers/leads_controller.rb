@@ -1,4 +1,7 @@
 class LeadsController < ApplicationController
+  
+  before_filter :authenticate_admin_user!, :only => [:index, :edit]
+
   # GET /leads
   # GET /leads.json
   def index
@@ -44,7 +47,7 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
-        format.html { redirect_to @lead, notice: 'Lead was successfully created.' }
+        format.html { redirect_to @lead, notice: '' }
         format.json { render json: @lead, status: :created, location: @lead }
       else
         format.html { render action: "new" }

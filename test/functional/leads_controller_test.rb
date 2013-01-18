@@ -1,10 +1,12 @@
 require 'test_helper'
 
 class LeadsControllerTest < ActionController::TestCase
-  setup do
+ /setup do
     @lead = leads(:one)
-  end
+  end/
 
+/
+  #auto generated tests
   test "should get index" do
     get :index
     assert_response :success
@@ -45,5 +47,5 @@ class LeadsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to leads_path
-  end
+  end/
 end
