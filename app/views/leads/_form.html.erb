@@ -1,8 +1,7 @@
 
     <%= simple_form_for(@lead) do |f| %>      
       <div class="well span">
-        <%= f.input :name, required: false %>
-        <%= f.input :email, required: false %>
+        <%= f.input :email, required: false, as: :string %>
         <%= f.button :submit, 'Submit',  id: 'submit_lead' %>
       </div>
     <% end %>
