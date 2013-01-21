@@ -1,20 +1,10 @@
-<%= simple_form_for(@lead) do |f| %>
-  <% if @lead.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
 
-      <ul>
-      <% @lead.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="container">
-    <%= f.input :name, :label => 'Name' %>
-    <%= f.input :email, :label => 'Email' %>
-    <%= f.button :submit, 'Submit' %>
-    
-  </div>
-<% end %>
+    <%= simple_form_for(@lead) do |f| %>      
+      <div class="span12">
+        <div class="well span5">
+          <%= f.input :name, required: false %>
+          <%= f.input :email, required: false %>
+          <%= f.button :submit, 'Submit' %>
+        </div>
+      </div>
+    <% end %>

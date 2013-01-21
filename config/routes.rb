@@ -5,6 +5,8 @@ Lyshirts::Application.routes.draw do
 
   resources :leads
 
+  match 'about' => 'about_us#show'
+
   root :to => 'leads#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
