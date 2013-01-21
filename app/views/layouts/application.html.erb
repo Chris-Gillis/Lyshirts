@@ -10,7 +10,7 @@
 	<body>
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
-				<div class="container-fluid">
+				<div class="container">
 					<%= link_to "Lyshirts", new_lead_path, class: 'brand' %>
 					
 					<ul class="nav">
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="main-content" class="container-fluid">
+		<div id="main-content" class="container">
 			<% flash.each do |type, message| %>
 				<div class="alert <%= flash_class type %>">
 					<button class="close" data-dismiss="alert">×</button>
