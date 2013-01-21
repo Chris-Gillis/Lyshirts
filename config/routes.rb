@@ -1,6 +1,8 @@
 Lyshirts::Application.routes.draw do
   
 
+  resources :shirts
+
   devise_for :admin_users
 
   resources :leads
