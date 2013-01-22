@@ -1,15 +1,21 @@
 Lyshirts::Application.routes.draw do
   
-
+  resources :leads
   resources :shirts
 
   devise_for :admin_users
 
-  resources :leads
+  as :admin_user do
+    get "/login" => 'devise/sessions#new', as: :login
+    post "/login" => 'devise/sessions#create', as: :login
+    delete "/logout" => 'devise/sessions#destroy', as: :logout
+  end
 
   match 'about' => 'about_us#show'
 
-  root :to => 'leads#new'
+  root :to => 'shirts#index'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

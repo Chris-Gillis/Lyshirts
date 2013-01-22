@@ -3,4 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @shirt %> |
-<%= link_to 'Back', shirts_path %>
+<%= link_to 'Back', shirts_path %> |
+<%= link_to 'Delete', shirt_path(@shirt), method: :delete %>

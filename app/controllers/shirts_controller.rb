@@ -1,4 +1,6 @@
 class ShirtsController < ApplicationController
+  before_filter :authenticate_admin_user!, :only => [:new, :edit, :update, :destroy]
+
   # GET /shirts
   # GET /shirts.json
   def index

@@ -1,27 +1,25 @@
-<h1>Listing shirts</h1>
-
-<table>
-  <tr>
-    <th>Image url</th>
-    <th>Site</th>
-    <th>Caption</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @shirts.each do |shirt| %>
-  <tr>
-    <td><%= shirt.image_url %></td>
-    <td><%= shirt.site %></td>
-    <td><%= shirt.caption %></td>
-    <td><%= link_to 'Show', shirt %></td>
-    <td><%= link_to 'Edit', edit_shirt_path(shirt) %></td>
-    <td><%= link_to 'Destroy', shirt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Shirt', new_shirt_path %>
+<section>
+  <h1>pick a shirt, any shirt</h1>
+  <div class="container">
+    <div class="row">
+      <% @shirts.each do |shirt| %>
+        <div class="span4">
+          <%= link_to image_tag(shirt.image_url), shirt_path(shirt) %>
+          <%= shirt.caption %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="horizontal_line">
+    <p>sites we love</p>
+  </div>
+  <div class="container affiliate_links">
+    <a target="_blank" href="http://www.shareasale.com/r.cfm?b=310475&amp;u=736754&amp;m=32833&amp;urllink=&amp;afftrack="><img src="http://www.shareasale.com/image/32833/125x125_tealtbird.jpg" alt="TeeFury.com" border="0" /></a>
+    <a target="_blank" href="http://www.shareasale.com/r.cfm?b=151667&u=736754&m=5108&urllink=&afftrack="><img src="http://www.shareasale.com/image/5108/1602.jpg" alt="BustedTees - The Best Thing To Happen To T-Shirts Since Sleeves" border="0"></a>
+    <a target="_blank" href="http://www.shareasale.com/r.cfm?b=208221&u=736754&m=19280&urllink=&afftrack="><img src="http://www.shareasale.com/image/19280/tweet_h_300.jpg" alt="say tweet again t-shirt" border="0"></a>
+    <a target="_blank" href="http://www.shareasale.com/r.cfm?b=187239&amp;u=736754&amp;m=23510&amp;urllink=&amp;afftrack="><img src="http://www.shareasale.com/image/300x250_jerkass_walley_world.jpg" alt="Jerkass Clothing Co." border="0" /></a>
+  </div>
+  
+</section>
