@@ -5,6 +5,7 @@ class ShirtsController < ApplicationController
   # GET /shirts.json
   def index
     @shirts = Shirt.all
+    @affiliates = Affiliate.all
 
     respond_to do |format|
       format.html # index.html.erb

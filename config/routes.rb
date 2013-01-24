@@ -1,5 +1,7 @@
 Lyshirts::Application.routes.draw do
   
+  resources :affiliates
+
   resources :leads
   resources :shirts
 

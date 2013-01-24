@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Image url:</b>
+  <%= @affiliate.image_url %>
+</p>
+
+<p>
+  <b>Affiliate url:</b>
+  <%= @affiliate.affiliate_url %>
+</p>
+
+<p>
+  <b>Affiliate site:</b>
+  <%= @affiliate.affiliate_site %>
+</p>
+
+
+<%= link_to 'Edit', edit_affiliate_path(@affiliate) %> |
+<%= link_to 'Back', affiliates_path %>

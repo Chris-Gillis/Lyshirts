@@ -1,9 +1,9 @@
 <div id="main" class="container span4">
 	<p id="notice"><%= notice %></p>
     <%= link_to image_tag(@shirt.image_url), @shirt.affiliate_link %>
-	
-	<p><%= @shirt.caption %></p>
 
-	<% if admin_user_signed_in? %> <%= link_to 'Edit', edit_shirt_path(@shirt) %> | <% end %>
+	<% if admin_user_signed_in? %> 
+		<%= link_to 'Edit', edit_shirt_path(@shirt) %> | 
+	<% end %>
 	<%= link_to 'Back', shirts_path %>
 </div>

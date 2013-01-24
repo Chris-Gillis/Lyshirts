@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  image_url: 
+  affiliate_url: 
+  affiliate_site: MyString
+
+two:
+  image_url: 
+  affiliate_url: 
+  affiliate_site: MyString
