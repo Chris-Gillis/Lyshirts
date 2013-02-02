@@ -4,8 +4,8 @@
     <div class="row">
       <div class="shirts">
         <% @shirts.each do |shirt| %>
-          <div class="span3">
-            <%= link_to image_tag(shirt.image_url), shirt_path(shirt) %>
+          <div class="span3 shirt_pics">
+            <%= link_to image_tag(shirt.image_url, alt: shirt.caption), shirt.affiliate_link %>
           </div>
         <% end %>
       </div>
