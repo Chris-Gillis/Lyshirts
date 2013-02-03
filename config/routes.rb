@@ -14,6 +14,7 @@ Lyshirts::Application.routes.draw do
   end
 
   match 'about' => 'about_us#show'
+  match 'legal' => 'legal#show'
 
   root :to => 'shirts#index'
 
